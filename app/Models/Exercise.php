@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Exercise extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'easy',
+        'medium',
+        'hard',
+    ];
+
+    public $timestamps = false;
 }
