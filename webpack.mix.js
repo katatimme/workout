@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,8 +11,17 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-]);
+mix.js("resources/js/app.js", "public/js").postCss(
+    "resources/css/app.css",
+    "public/css",
+    [require("postcss-import"), require("tailwindcss"), require("autoprefixer")]
+);
+
+mix.browserSync({
+    proxy: "workout.test",
+    files: [
+        "public/lib/css/app.css", // Generated .css file
+        "public/lib/js/app.js", // Generated .js file
+        "resources/views/**/*.php",
+    ],
+});
