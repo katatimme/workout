@@ -20,8 +20,8 @@
         @if (Route::has('login'))
             <div class="fixed top-0 left-0 right-0 px-6 py-4 bg-gray-100 dark:bg-gray-900 flex justify-end bg-opacity-60 z-10">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class=" flex items-end text-sm text-w-700 underline">Dashboard</a>
-                    <a href="{{ url('/new-workout') }}" class="ml-4 px-2 py-1 w-auto rounded-md bg-green-500 hover:bg-green-600 focus:bg-green-700 text-sm text-white">New Workout</a>
+                    <a href="{{ url('/workouts') }}" class=" flex items-end text-sm text-w-700 underline">Dashboard</a>
+                    <a href="{{ url('/workouts/new') }}" class="ml-4 px-2 py-1 w-auto rounded-md bg-green-500 hover:bg-green-600 focus:bg-green-700 text-sm text-white">New Workout</a>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
