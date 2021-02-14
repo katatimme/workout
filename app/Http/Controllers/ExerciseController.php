@@ -8,16 +8,16 @@ use App\Models\Exercise;
 
 class ExerciseController extends Controller
 {
-    public function showForAll()
+    public function show()
     {
         return view('exercises', [
             'exercises' => Exercise::all()
         ]);
     }
 
-    public function showForNew()
+    public function new()
     {
-        return view('new-workout', [
+        return view('workouts/new', [
             'exercises' => Exercise::all(),
         ]);
     }
@@ -33,18 +33,6 @@ class ExerciseController extends Controller
     public function store(Request $request)
     {
         // Validate the request...
-
-        $exercise = new Exercise;
-
-        $exercise->name = $exercise->name;
-
-        $exercise->easy = $exercise->easy;
-
-        $exercise->medium = $exercise->medium;
-
-        $exercise->hard = $exercise->hard;
-
-        $exercise->save();
     }
     
 

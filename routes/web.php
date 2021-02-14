@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\WorkoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/exercises', [ExerciseController::class, 'show']);
 
-Route::get('/exercises', [ExerciseController::class, 'showForAll']);
+Route::get('/workouts', [WorkoutController::class, 'create'])
+->middleware(['auth'])
+->name('workouts')
+->name('logout');
 
-Route::get('/new-workout', [ExerciseController::class, 'showForNew']);
+Route::get('/workouts/new', [ExerciseController::class, 'new'])->middleware(['auth']);
+Route::post('/workouts/new', [WorkoutController::class, 'store'])->middleware(['auth']);
 
 require __DIR__.'/auth.php';

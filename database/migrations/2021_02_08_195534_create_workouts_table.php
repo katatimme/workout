@@ -15,7 +15,13 @@ class CreateWorkoutsTable extends Migration
     {
         Schema::create('workouts', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('difficulty');
+            $table->foreignId('exercise0_id')->constrained('exercises');
+            $table->foreignId('exercise1_id')->constrained('exercises');
+            $table->foreignId('exercise2_id')->constrained('exercises');
+            $table->foreignId('exercise3_id')->constrained('exercises');
         });
     }
 
