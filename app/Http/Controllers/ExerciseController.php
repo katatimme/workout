@@ -15,7 +15,7 @@ class ExerciseController extends Controller
         ]);
     }
 
-    public function new()
+    public function get()
     {
         return view('workouts/new', [
             'exercises' => Exercise::all(),

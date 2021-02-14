@@ -40,105 +40,107 @@
                         </div>
                     <div class="mt-12 flex">
                         @foreach($workouts as $workout)
-                            <div class="mx-4" x-data="{difficulty: '{{$workout->difficulty}}'}">
-                                <div class="flex justify-center text-lg font-semibold text-gray-700">
-                                    {{$workout->name}}
+                            <a href="/workouts/{{$workout->id}}">
+                                <div class="mx-4" x-data="{difficulty: '{{$workout->difficulty}}'}">
+                                    <div class="flex justify-center text-lg font-semibold text-gray-700">
+                                        {{$workout->name}}
+                                    </div>
+                                    <div class="w-48 bg-white overflow-hidden shadow sm:rounded grid grid-cols-1">
+                                        <div 
+                                            class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
+                                            x-bind:class="{'bg-pink-100': difficulty == 'easy',
+                                                'bg-pink-200': difficulty == 'medium',
+                                                'bg-pink-300': difficulty == 'hard'}"
+                                            >
+                                            <div 
+                                                class="text-center font-semibold text-lg"
+                                                x-bind:class="{'text-green-600': difficulty == 'easy',
+                                                    'text-green-700': difficulty == 'medium',
+                                                    'text-green-800': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise0_id]->name}}
+                                            </div>
+                                            <div 
+                                                class="text-center"
+                                                x-bind:class="{'text-gray-500': difficulty == 'easy',
+                                                    'text-gray-600': difficulty == 'medium',
+                                                    'text-gray-700': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise0_id][$workout->difficulty]}} reps
+                                            </div>
+                                        </div>
+                                        <div 
+                                            class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
+                                            x-bind:class="{'bg-pink-100': difficulty == 'easy',
+                                                'bg-pink-200': difficulty == 'medium',
+                                                'bg-pink-300': difficulty == 'hard'}"
+                                            >
+                                            <div 
+                                                class="flex justify-center font-semibold text-lg"
+                                                x-bind:class="{'text-green-600': difficulty == 'easy',
+                                                    'text-green-700': difficulty == 'medium',
+                                                    'text-green-800': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise1_id]->name}}
+                                            </div>
+                                            <div 
+                                                class="text-center"
+                                                x-bind:class="{'text-gray-500': difficulty == 'easy',
+                                                    'text-gray-600': difficulty == 'medium',
+                                                    'text-gray-700': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise1_id][$workout->difficulty]}} reps
+                                            </div>
+                                        </div>
+                                        <div 
+                                            class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
+                                            x-bind:class="{'bg-pink-100': difficulty == 'easy',
+                                                'bg-pink-200': difficulty == 'medium',
+                                                'bg-pink-300': difficulty == 'hard'}"
+                                            >
+                                            <div 
+                                                class="text-center font-semibold text-lg"
+                                                x-bind:class="{'text-green-600': difficulty == 'easy',
+                                                    'text-green-700': difficulty == 'medium',
+                                                    'text-green-800': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise2_id]->name}}
+                                            </div>
+                                            <div 
+                                                class="text-center"
+                                                x-bind:class="{'text-gray-500': difficulty == 'easy',
+                                                    'text-gray-600': difficulty == 'medium',
+                                                    'text-gray-700': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise2_id][$workout->difficulty]}} reps
+                                            </div>
+                                        </div>
+                                        <div 
+                                            class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
+                                            x-bind:class="{'bg-pink-100': difficulty == 'easy',
+                                                'bg-pink-200': difficulty == 'medium',
+                                                'bg-pink-300': difficulty == 'hard'}"
+                                            >
+                                            <div 
+                                                class="text-center font-semibold text-lg"
+                                                x-bind:class="{'text-green-600': difficulty == 'easy',
+                                                    'text-green-700': difficulty == 'medium',
+                                                    'text-green-800': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise3_id]->name}}
+                                            </div>
+                                            <div 
+                                                class="text-center"
+                                                x-bind:class="{'text-gray-500': difficulty == 'easy',
+                                                    'text-gray-600': difficulty == 'medium',
+                                                    'text-gray-700': difficulty == 'hard'}"
+                                                >
+                                                {{$exercises[$workout->exercise3_id][$workout->difficulty]}} reps
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="w-48 bg-white overflow-hidden shadow sm:rounded grid grid-cols-1">
-                                    <div 
-                                        class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
-                                        x-bind:class="{'bg-pink-100': difficulty == 'easy',
-                                            'bg-pink-200': difficulty == 'medium',
-                                            'bg-pink-300': difficulty == 'hard'}"
-                                        >
-                                        <div 
-                                            class="text-center font-semibold text-lg"
-                                            x-bind:class="{'text-green-600': difficulty == 'easy',
-                                                'text-green-700': difficulty == 'medium',
-                                                'text-green-800': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise0_id]->name}}
-                                        </div>
-                                        <div 
-                                            class="text-center"
-                                            x-bind:class="{'text-gray-500': difficulty == 'easy',
-                                                'text-gray-600': difficulty == 'medium',
-                                                'text-gray-700': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise0_id][$workout->difficulty]}} reps
-                                        </div>
-                                    </div>
-                                    <div 
-                                        class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
-                                        x-bind:class="{'bg-pink-100': difficulty == 'easy',
-                                            'bg-pink-200': difficulty == 'medium',
-                                            'bg-pink-300': difficulty == 'hard'}"
-                                        >
-                                        <div 
-                                            class="flex justify-center font-semibold text-lg"
-                                            x-bind:class="{'text-green-600': difficulty == 'easy',
-                                                'text-green-700': difficulty == 'medium',
-                                                'text-green-800': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise1_id]->name}}
-                                        </div>
-                                        <div 
-                                            class="text-center"
-                                            x-bind:class="{'text-gray-500': difficulty == 'easy',
-                                                'text-gray-600': difficulty == 'medium',
-                                                'text-gray-700': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise1_id][$workout->difficulty]}} reps
-                                        </div>
-                                    </div>
-                                    <div 
-                                        class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
-                                        x-bind:class="{'bg-pink-100': difficulty == 'easy',
-                                            'bg-pink-200': difficulty == 'medium',
-                                            'bg-pink-300': difficulty == 'hard'}"
-                                        >
-                                        <div 
-                                            class="text-center font-semibold text-lg"
-                                            x-bind:class="{'text-green-600': difficulty == 'easy',
-                                                'text-green-700': difficulty == 'medium',
-                                                'text-green-800': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise2_id]->name}}
-                                        </div>
-                                        <div 
-                                            class="text-center"
-                                            x-bind:class="{'text-gray-500': difficulty == 'easy',
-                                                'text-gray-600': difficulty == 'medium',
-                                                'text-gray-700': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise2_id][$workout->difficulty]}} reps
-                                        </div>
-                                    </div>
-                                    <div 
-                                        class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
-                                        x-bind:class="{'bg-pink-100': difficulty == 'easy',
-                                            'bg-pink-200': difficulty == 'medium',
-                                            'bg-pink-300': difficulty == 'hard'}"
-                                        >
-                                        <div 
-                                            class="text-center font-semibold text-lg"
-                                            x-bind:class="{'text-green-600': difficulty == 'easy',
-                                                'text-green-700': difficulty == 'medium',
-                                                'text-green-800': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise3_id]->name}}
-                                        </div>
-                                        <div 
-                                            class="text-center"
-                                            x-bind:class="{'text-gray-500': difficulty == 'easy',
-                                                'text-gray-600': difficulty == 'medium',
-                                                'text-gray-700': difficulty == 'hard'}"
-                                            >
-                                            {{$exercises[$workout->exercise3_id][$workout->difficulty]}} reps
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                     <a href="{{ url('/workouts/new') }}" class="mt-8 px-4 py-2 w-auto flex items-center justify-center rounded-md bg-green-500 text-xl text-white font-semibold hover:bg-green-600 focus:bg-green-700">New Workout</a>

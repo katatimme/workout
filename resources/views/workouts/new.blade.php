@@ -36,7 +36,7 @@
                         selected: [null, null, null, null],
                         newWorkoutFor: null
                     }"
-                    class="flex flex-1 flex-col items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0"
+                    class="flex flex-1 flex-col items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center py-16"
                     >
                     @csrf
                     <div class="text-5xl font-semibold text-green-500">CREATE A NEW WORKOUT</div>

@@ -26,7 +26,10 @@ Route::get('/workouts', [WorkoutController::class, 'create'])
 ->name('workouts')
 ->name('logout');
 
-Route::get('/workouts/new', [ExerciseController::class, 'new'])->middleware(['auth']);
+Route::get('/workouts/new', [ExerciseController::class, 'get'])->middleware(['auth']);
 Route::post('/workouts/new', [WorkoutController::class, 'store'])->middleware(['auth']);
+Route::get('/workouts/{id}', [WorkoutController::class, 'show'])->middleware(['auth']);
+Route::put('/workouts/{id}', [WorkoutController::class, 'update'])->middleware(['auth']);
+Route::delete('/workouts/{id}', [WorkoutController::class, 'delete'])->middleware(['auth']);
 
 require __DIR__.'/auth.php';
