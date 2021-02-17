@@ -37,8 +37,8 @@
                 class="w-full h-96 relative">
             </div>
 
-            <div class="flex flex-1 flex-col items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-                <div class="text-5xl font-semibold text-pink-500">
+            <div class="flex flex-1 flex-col items-center items-top bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+                <div class="mt-4 md:mt-8 lg:mt-20 text-3xl md:text-5xl font-semibold text-pink-500">
                     WORKOUT WITH A PLAN
                 </div>
                 <div class="mt-8 w-4/5 bg-white overflow-hidden shadow sm:rounded grid grid-cols-1 md:grid-cols-3">

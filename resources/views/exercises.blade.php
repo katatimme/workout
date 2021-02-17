@@ -34,11 +34,11 @@
 
         <div class="min-h-screen flex flex-col">
 
-            <div class="flex flex-1 flex-col items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-                <div class="text-5xl font-semibold text-pink-500">
+            <div class="flex flex-1 flex-col items-center items-top bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+                <div class="mt-20 md:mt-28 text-3xl md:text-5xl font-semibold text-center text-pink-500">
                     ALL EXERCISES FOR YOUR WORKOUT
                 </div>
-                <div class="mt-8 w-4/5 bg-white overflow-hidden shadow sm:rounded grid grid-cols-1 md:grid-cols-3">
+                <div class="mt-8 mb-8 w-4/5 bg-white overflow-hidden shadow sm:rounded grid grid-cols-1 md:grid-cols-3">
                     @foreach ($exercises as $exercise)
                         <div class="p-6 col-span-1 border-t md:border-l">
                             <div class="flex items-center font-semibold text-lg">

@@ -40,8 +40,8 @@
                         >
                         @method('PUT')
                         @csrf
-                        <div class="text-5xl font-semibold text-green-500">EDIT YOUR WORKOUT</div>
-                        <div class="mt-20 text-gray-500 font-semibold">Workout name:</div>
+                        <div class="text-3xl md:text-5xl font-semibold text-green-500">EDIT YOUR WORKOUT</div>
+                        <div class="mt-12 md:mt-20 text-gray-500 font-semibold">Workout name:</div>
                         <div class="mt-1 relative rounded-md shadow-sm">
                             <input 
                                 type="text"

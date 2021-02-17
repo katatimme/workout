@@ -36,11 +36,11 @@
                         selected: [null, null, null, null],
                         newWorkoutFor: null
                     }"
-                    class="flex flex-1 flex-col items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center py-16"
+                    class="px-8 flex flex-1 flex-col items-center items-top justify-center bg-gray-100 dark:bg-gray-900 sm:items-center py-16"
                     >
                     @csrf
-                    <div class="text-5xl font-semibold text-green-500">CREATE A NEW WORKOUT</div>
-                    <div class="mt-20 text-gray-500 font-semibold">Choose a name:</div>
+                    <div class="text-3xl md:text-5xl font-semibold text-center text-green-500">CREATE A NEW WORKOUT</div>
+                    <div class="mt-12 md:mt-20 text-gray-500 font-semibold">Choose a name:</div>
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input 
                             type="text"
