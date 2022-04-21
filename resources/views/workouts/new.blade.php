@@ -52,7 +52,7 @@
                     <div class="mt-8 text-gray-500 font-semibold">Choose a difficulty:</div>
                     <div class="mt-1 flex">
                         <label 
-                            class="rounded-full h-24 w-24 flex items-center justify-center bg-gray-300 text-green-600 text-xl font-semibold"
+                            class="cursor-pointer rounded-full h-20 w-20 flex items-center justify-center bg-gray-300 text-green-600 text-xl font-semibold"
                             x-bind:class="{'bg-pink-100 border border-green-600': difficulty == 'easy'}"
                             @click="difficulty = 'easy'"
                             >
@@ -60,7 +60,7 @@
                             <input class="hidden" type="radio" id="easy" name="difficulty" value="easy"></input>
                         </label>
                         <label 
-                            class="mx-4 rounded-full h-24 w-24 flex items-center justify-center bg-gray-400 text-green-700 text-xl font-semibold"
+                            class="cursor-pointer mx-4 rounded-full h-20 w-20 flex items-center justify-center bg-gray-400 text-green-700 text-xl font-semibold"
                             x-bind:class="{'bg-pink-200 border border-green-700': difficulty == 'medium'}"
                             @click="difficulty = 'medium'"
                             >
@@ -69,7 +69,7 @@
                         </label>
 
                         <label 
-                            class="rounded-full h-24 w-24 flex items-center justify-center bg-gray-500 text-green-800 text-xl font-semibold"
+                            class="cursor-pointer rounded-full h-20 w-20 flex items-center justify-center bg-gray-500 text-green-800 text-xl font-semibold"
                             x-bind:class="{'bg-pink-300 border border-green-800': difficulty == 'hard'}"
                             @click="difficulty = 'hard'"
                             >
@@ -84,7 +84,7 @@
                                 <input x-bind:name="'exercise' + index + '_id'" x-bind:value="exercise ? exercise.id : ''" class="hidden"></input>
                                 <template x-if='exercise == null'>
                                     <div 
-                                        class="h-24 flex items-center justify-center text-6xl font-bold text-green-500 col-span-1 border-t md:border-l"
+                                        class="h-24 cursor-pointer flex items-center justify-center text-6xl font-bold text-green-500 col-span-1 border-t md:border-l"
                                         @click="
                                             showModal = true
                                             newWorkoutFor = index
@@ -95,7 +95,7 @@
                                 </template>
                                 <template x-if='exercise != null'>
                                     <div 
-                                        class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
+                                        class="cursor-pointer h-24 px-2 py-4 col-span-1 border-t md:border-l"
                                         x-bind:class="{'bg-pink-100': difficulty == 'easy',
                                             'bg-pink-200': difficulty == 'medium',
                                             'bg-pink-300': difficulty == 'hard'}"
@@ -133,7 +133,7 @@
                                 @click.away="showModal = false"
                                 >
                                 <div 
-                                    class="absolute top-0 right-0 flex justify-center items-center h-8 w-8 text-2xl font-semibold text-pink-600"
+                                    class="cursor-pointer absolute top-0 right-0 flex justify-center items-center h-8 w-8 text-2xl font-semibold text-pink-600"
                                     @click="showModal = false"
                                     >
                                     ×
@@ -142,7 +142,7 @@
                                     <div class="bg-white overflow-hidden shadow sm:rounded grid grid-cols-1 md:grid-cols-3">
                                         <template x-for="(exercise, index) in exercises" :key="exercise">
                                             <div 
-                                                class="h-24 px-2 py-4 col-span-1 border-t md:border-l"
+                                                class="cursor-pointer h-24 px-2 py-4 col-span-1 border-t md:border-l"
                                                 x-bind:class="{'bg-pink-100 hover:bg-green-100': difficulty == 'easy',
                                                     'bg-pink-200 hover:bg-green-200': difficulty == 'medium',
                                                     'bg-pink-300 hover:bg-green-300': difficulty == 'hard'}"

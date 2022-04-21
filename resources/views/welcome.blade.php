@@ -41,7 +41,7 @@
                 <div class="mt-4 md:mt-8 lg:mt-20 text-3xl md:text-5xl font-semibold text-pink-500">
                     WORKOUT WITH A PLAN
                 </div>
-                <div class="mt-8 w-4/5 bg-white overflow-hidden shadow sm:rounded grid grid-cols-1 md:grid-cols-3">
+                <div class="mt-8 w-4/5 max-w-4xl bg-white overflow-hidden shadow rounded-md grid grid-cols-1 md:grid-cols-3">
                     <div class="p-6 col-span-1 border-t md:border-l">
                         <div class="flex items-center">
                             Custom

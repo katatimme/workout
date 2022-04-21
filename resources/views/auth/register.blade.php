@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <div class="rounded-full h-24 w-24 flex items-center justify-center bg-pink-300 text-green-800 text-xl font-semibol">Workout</div>
             </a>
         </x-slot>
 
